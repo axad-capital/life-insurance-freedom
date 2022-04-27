@@ -51,29 +51,30 @@
     //   localStorage.clear()
     // }
 
-    if (window.location.href !== 'https://lifeinsurancefreedom.netlify.app/thanks') {
-      localStorage.clear()
-    }
-
     // if (window.location.href !== 'https://lifeinsurancefreedom.com/thanks') {
     //   localStorage.clear()
     // }
 
-    let data = JSON.parse(localStorage.getItem('lifeInsuranceFreedom'))
+    if (window.location.href === 'http://localhost:3000/thanks' || window.location.href === 'https://lifeinsurancefreedom.netlify.app/thanks' || window.location.href === 'https://lifeinsurancefreedom.com/thanks') {
 
-    var MediaAlphaExchange = {
-      "data": {
-        "zip": data.zip,
-        "birthday": data.birth,
-        "coverage-type": data.coverage,
-        "coverage-amount": data.amount
-      },
-      "placement_id": "vxpszkWYRxMJBPzLq6XRbhunR-K90A",
-      "sub_1": data.id,
-      "type": "ad_unit",
-      "version": 17
-    };
-    MediaAlphaExchange__load('mediaalpha_placeholder');
+      let data = JSON.parse(localStorage.getItem('lifeInsuranceFreedom'))
+
+      var MediaAlphaExchange = {
+        "data": {
+          "zip": data.zip,
+          "birthday": data.birth,
+          "coverage-type": data.coverage,
+          "coverage-amount": data.amount
+        },
+        "placement_id": "vxpszkWYRxMJBPzLq6XRbhunR-K90A",
+        "sub_1": data.id,
+        "type": "ad_unit",
+        "version": 17
+      };
+      MediaAlphaExchange__load('mediaalpha_placeholder');
+    } else {
+      localStorage.clear()
+    }
 
   </script>
 </body>
