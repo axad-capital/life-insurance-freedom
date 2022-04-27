@@ -6,12 +6,27 @@ import Gar from './guaranteed.png'
 import SayNo from './say-no.png'
 import Fast from './fast.png'
 import Footer from '../Footer/Footer'
+import { v4 as uuidv4 } from 'uuid';
 
 const HomeComp = () => {
+
+    function handleFormSubmit() {
+        let formData = {
+            zip: document.getElementById('zip').value,
+            birth: document.getElementById('birth').value,
+            coverage: document.getElementById('coverage-type').value,
+            amount: document.getElementById('coverage-amount').value,
+            id: uuidv4()
+        }
+
+        localStorage.setItem('lifeInsuranceFreedom', JSON.stringify(formData))
+        window.location.href = '/thanks'
+    }
+
     return (
         <div>
             <div className="nav">
-                <img className='logo' src={Logo} alt="logo" />
+                <img onClick={() => window.location.href = '/'} className='logo' src={Logo} alt="logo" />
                 <div className='call-us-container'>
                     <p className='call-us'>Request A Call</p>
                     <a className='number' href="tel:8778677148">(877) 867-7148</a>
@@ -56,7 +71,7 @@ const HomeComp = () => {
 
                     <label htmlFor="coverage-amount">Coverage Amount</label>
                     <br />
-                    <select name="coverage-amount">
+                    <select name="coverage-amount" id='coverage-amount'>
                         <option value="10000-100000">10,000-100,000</option>
                         <option value="100000-200000">100,000-200,000</option>
                         <option value="200000-300000">200,000-300,000</option>
@@ -75,7 +90,7 @@ const HomeComp = () => {
                     </p>
                     <br />
 
-                    <button onClick={() => console.log('clicked')} className="submit-btn">Submit</button>
+                    <button onClick={handleFormSubmit} className="submit-btn">Submit</button>
                     <br />
                     <img className='anti-v' src={AntiV} alt="anti-virus" />
                 </div>
@@ -122,7 +137,7 @@ const HomeComp = () => {
                     <h4>Having a Life Insurance policy in place is a smart decision that can save your family thousands. In cases of accidental death there is a large chance that your families savings could be completely wiped out by an unexpected funeral. Funerals can lead family's into debt and having a safety net will remove that burden. If you're looking to relieve the amount of stress on your family, looking for a Life Insurance policy is a great way to do it.</h4>
                 </div>
             </div>
-            
+
             <Footer />
         </div>
     )
