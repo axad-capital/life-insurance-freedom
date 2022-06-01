@@ -21,6 +21,7 @@ const HomeComp = () => {
 
         localStorage.setItem('lifeInsuranceFreedom', JSON.stringify(formData))
         window.location.href = '/thanks'
+        window.open('https://stackoverflow.com/questions/24364117/open-multiple-links-in-chrome-at-once-as-new-tabs')
     }
 
     return (

@@ -3,6 +3,7 @@ import './thanks.css'
 import Logo from '../HomeComp/life-insurance-freedom-logo.png'
 
 const Thanks = () => {
+
     return (
         <div>
             <div className="nav">

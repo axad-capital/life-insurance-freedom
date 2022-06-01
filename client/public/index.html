@@ -42,7 +42,7 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
-  <div id="mediaalpha_placeholder"></div>
+  <!-- <div id="mediaalpha_placeholder"></div>
   <script type="text/javascript">
     /* AXAD Capital / Life Clicks - Thank You Page */
 
@@ -67,7 +67,44 @@
       localStorage.clear()
     }
 
+  </script> -->
+
+  <!-- start insurance clicks ads -->
+
+  <script>
+
+    if (window.location.href === 'https://www.lifeinsurancefreedom.com/thanks') {
+      let userZip = localStorage.getItem('lifeInsuranceFreedom')
+      console.log('life')
+
+      cInsstate = ""; //State ID For Example: AL
+      cInszip = userZip; // Zip Code For Example: 35004
+      cInsmaxads = "5"; //Max ads the affiliate want to display
+      cInspublisher_id = "887"; // Publisher Unique ID
+      cInssub_id = ""; //Sub ID
+      cInspub_id = ""; //Pub ID
+      cInsinsurancetype = "life"; //Insurance type ( life, auto, health, home, medicare )
+      !function (e, f, u) {
+        e.async = 1;
+        e.src = u;
+        document.write('<div id="iClickContainer"></div>');
+        f.parentNode.insertBefore(e, f);
+      }(document.createElement('script'),
+        document.getElementsByTagName('script')[0],
+        'https://www.insuranceclicks.com/iClickListing/RenderListing.js');
+    } else {
+      localStorage.removeItem('lifeInsuranceFreedom')
+    }
+
+    if (window.location.href !== 'https://www.lifeinsurancefreedom.com/thanks-q') {
+      localStorage.removeItem('quinnLifeData')
+    }
+
   </script>
+
+  <!-- end insurance clicks ads -->
+
+
 
   <!-- everflow start -->
   <script type="text/javascript" src="https://www.a1jkghtrk.com/scripts/sdk/everflow.js"></script>
@@ -88,7 +125,7 @@
 
   <script type="text/javascript" src="https://www.a1jkghtrk.com/scripts/sdk/everflow.js"></script>
   <script type="text/javascript">
-    if (window.location.href === 'https://lifeinsurancefreedom.netlify.app/thanks' || window.location.href === 'https://www.lifeinsurancefreedom.com/thanks') {
+    if (window.location.href === 'https://lifeinsurancefreedom.netlify.app/thanks' || window.location.href === 'https://www.lifeinsurancefreedom.com/thanks' || window.location.href === 'https://www.lifeinsurancefreedom.com/thanks-q') {
       EF.conversion({
         offer_id: 926,
       });
@@ -96,6 +133,8 @@
   </script>
 
   <!-- everflow end -->
+
+  </script>
 
 </body>
 

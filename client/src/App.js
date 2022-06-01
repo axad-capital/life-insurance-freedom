@@ -6,6 +6,8 @@ import Terms from './pages/Legal/Terms';
 import Disclaimer from './pages/Legal/Disclaimer';
 import Partners from './pages/Legal/Partners';
 import Thanks from './components/Thanks/Thanks';
+import QuinnQuote from './components/QuinnQuote/QuinnQuote';
+import QuinnThanks from './components/QuinnQuote/QuinnThanks';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route exact path='/disclaimer' element={<Disclaimer />} />
           <Route exact path='/partners' element={<Partners />} />
           <Route exact path='/thanks' element={<Thanks />} />
+          <Route exact path='/q-quote' element={<QuinnQuote />} />
+          <Route exact path='/thanks-q' element={<QuinnThanks />} />
         </Routes>
       </Router>
     </div>
