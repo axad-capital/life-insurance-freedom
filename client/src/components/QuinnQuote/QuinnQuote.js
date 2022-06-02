@@ -23,7 +23,7 @@ const QuinnQuote = () => {
         "ni_ad_client": 2839,
         "ni_zc": document.getElementById('zip').value,
         "ip": "11111111",
-        "ua": "chrome",
+        "ua": navigator.userAgent,
         "ni_var1": "1",
         "ni_ref": "https://www.lifeinsurancefreedom.com/thanks-q"
       },
