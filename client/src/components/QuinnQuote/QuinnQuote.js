@@ -20,7 +20,7 @@ const QuinnQuote = () => {
     var qFormData = {
       "tracking": {
         "content_type": "xml/json",
-        "ni_ad_client": 2839,
+        "ni_ad_client": 690068,
         "ni_zc": document.getElementById('zip').value,
         "ip": "11111111",
         "ua": navigator.userAgent,
