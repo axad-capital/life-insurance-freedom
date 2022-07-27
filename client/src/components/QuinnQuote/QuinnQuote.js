@@ -10,6 +10,16 @@ const QuinnQuote = () => {
 
   const [error, setError] = useState("")
 
+  function getVarId() {
+    var url = window.location.href;
+    var match = url.match(/source=(\d+)/)
+    if (match) {
+        var varId = match[1];
+        return varId
+    }
+    return 21
+}
+
   function handleQFormSubmit() {
 
     if (document.getElementById('zip').value === "") {
@@ -24,7 +34,7 @@ const QuinnQuote = () => {
         "ni_zc": document.getElementById('zip').value,
         "ip": "11111111",
         "ua": navigator.userAgent,
-        "ni_var1": "1",
+        "ni_var1": getVarId(),
         "ni_ref": "https://www.lifeinsurancefreedom.com/thanks-q"
       },
       "contact": {
